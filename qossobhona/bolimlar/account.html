@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kirish — Sifat Gosht Markazi</title>
+  <link rel="stylesheet" href="../stayl.css/stayl.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo" aria-label="Bosh sahifa">
+      <span class="logo-icon" aria-hidden="true">🥩</span>
+      <span class="logo-text">Sifat<span>gosht</span></span>
+    </a>
+    <nav aria-label="Asosiy menyu">
+      <ul>
+        <li><a href="../index.html">Bosh sahifa</a></li>
+        <li><a href="asosiy.html">Asosiy</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="savat.html">Savat (<span data-cart-count>0</span>)</a></li>
+        <li><a class="active" href="account.html">Kirish</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="account-card">
+      <h1>Mijoz akkaunti</h1>
+      <p>Akkauntga kiring yoki yangisini yarating.</p>
+      <div class="account-switch" role="group" aria-label="Akkaunt amali">
+        <button class="active" type="button" data-account-mode="login" aria-pressed="true">Kirish</button>
+        <button type="button" data-account-mode="register" aria-pressed="false">Ro'yxatdan o'tish</button>
+      </div>
+      <form class="account-form" id="account-form">
+        <label for="account-phone">Telefon raqami</label>
+        <input id="account-phone" name="phone" type="tel" autocomplete="tel" required>
+        <label for="account-password">Parol</label>
+        <input id="account-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="primary-btn" type="submit">Kirish</button>
+      </form>
+      <p class="account-message" id="account-message" aria-live="polite"></p>
+      <form class="account-form" id="account-register-form" hidden>
+        <label for="register-name">To'liq ism</label>
+        <input id="register-name" name="name" type="text" autocomplete="name" maxlength="120" required>
+        <label for="register-phone">Telefon raqami</label>
+        <input id="register-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" required>
+        <label for="register-password">Parol</label>
+        <input id="register-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+        <label for="register-password-confirm">Parolni takrorlang</label>
+        <input id="register-password-confirm" name="passwordConfirm" type="password" autocomplete="new-password" minlength="8" required>
+        <button class="primary-btn" type="submit">Akkaunt yaratish</button>
+      </form>
+      <p class="account-message" id="register-message" aria-live="polite" hidden></p>
+    </section>
+  </main>
+  <script src="../js/java.js"></script>
+</body>
+</html>

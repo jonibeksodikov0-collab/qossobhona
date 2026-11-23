@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Savat — Sifat Gosht Markazi</title>
+  <link rel="stylesheet" href="../stayl.css/stayl.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo" aria-label="Bosh sahifa">
+      <span class="logo-icon" aria-hidden="true">🥩</span>
+      <span class="logo-text">Sifat<span>gosht</span></span>
+    </a>
+    <nav aria-label="Asosiy menyu">
+      <ul>
+        <li><a href="../index.html">Bosh sahifa</a></li>
+        <li><a href="asosiy.html">Asosiy</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a class="active" href="savat.html">Savat (<span data-cart-count>0</span>)</a></li>
+        <li><a href="account.html">Kirish</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container cart-wrap">
+    <div class="section-heading">
+      <h1>Savat</h1>
+      <button type="button" class="link-btn" id="clear-cart">Savatni tozalash</button>
+    </div>
+    <div id="cart-items"></div>
+    <div class="cart-total" id="cart-total"></div>
+    <form class="checkout-form" id="checkout-form">
+      <h2>Buyurtmani rasmiylashtirish</h2>
+      <label for="checkout-name">Ismingiz</label>
+      <input id="checkout-name" name="name" autocomplete="name" maxlength="120" required>
+      <label for="checkout-phone">Telefon raqami</label>
+      <input id="checkout-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" required>
+      <label for="checkout-address">Yetkazib berish manzili</label>
+      <input id="checkout-address" name="address" autocomplete="street-address" maxlength="300" required>
+      <button class="primary-btn" type="submit">Buyurtma berish</button>
+      <p class="account-message" id="checkout-message" aria-live="polite"></p>
+    </form>
+  </main>
+  <script src="../js/java.js"></script>
+</body>
+</html>

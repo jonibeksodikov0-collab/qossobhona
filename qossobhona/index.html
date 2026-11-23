@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sifatli mol go'shti markazi">
+  <title>Sifat Gosht Markazi</title>
+  <link rel="stylesheet" href="stayl.css/stayl.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo" aria-label="Bosh sahifa">
+      <span class="logo-icon" aria-hidden="true">🥩</span>
+      <span class="logo-text">Sifat<span>gosht</span></span>
+    </a>
+    <nav aria-label="Asosiy menyu">
+      <ul>
+        <li><a class="active" href="index.html">Bosh sahifa</a></li>
+        <li><a href="bolimlar/asosiy.html">Asosiy</a></li>
+        <li><a href="bolimlar/menu.html">Menu</a></li>
+        <li><a href="bolimlar/savat.html">Savat (<span data-cart-count>0</span>)</a></li>
+        <li><a href="bolimlar/account.html">Kirish</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Har kuni yangi va sifatli</p>
+        <h1 id="site-hero-title">Toza va mazali go'sht</h1>
+        <p id="site-hero-text">Mol va qo'y go'shti, tayyor maxsulot va tez yetkazib berish.</p>
+        <a class="primary-btn" href="bolimlar/menu.html">Menuni ko'rish</a>
+      </div>
+      <div class="hero-icon" aria-hidden="true">🥩</div>
+    </section>
+
+    <section>
+      <div class="section-heading">
+        <h2>Ommabop mahsulotlar</h2>
+        <a href="bolimlar/menu.html">Barchasini ko'rish</a>
+      </div>
+      <p class="store-message" id="catalog-message" aria-live="polite"></p>
+      <div class="products" data-products-limit="3">
+        <article class="product-card">
+          <div class="product-image" aria-hidden="true">🥩</div>
+          <h3>Mol go'shti (laqim)</h3>
+          <p class="price">85 000 so'm / kg</p>
+          <div class="card-qty-box">
+            <button type="button" class="dec-from-cart-btn" data-id="laqim" aria-label="Laqim miqdorini kamaytirish">−</button>
+            <span data-item-qty>0</span>
+            <button type="button" class="add-to-cart-btn" data-id="laqim" data-name="Mol go'shti (laqim)" data-price="85000" aria-label="Laqim qo'shish">+</button>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image" aria-hidden="true">🍖</div>
+          <h3>Qo'y go'shti</h3>
+          <p class="price">95 000 so'm / kg</p>
+          <div class="card-qty-box">
+            <button type="button" class="dec-from-cart-btn" data-id="qoy" aria-label="Qo'y go'shti miqdorini kamaytirish">−</button>
+            <span data-item-qty>0</span>
+            <button type="button" class="add-to-cart-btn" data-id="qoy" data-name="Qo'y go'shti" data-price="95000" aria-label="Qo'y go'shti qo'shish">+</button>
+          </div>
+        </article>
+        <article class="product-card">
+          <div class="product-image" aria-hidden="true">🌭</div>
+          <h3>Kolbasa</h3>
+          <p class="price">55 000 so'm / kg</p>
+          <div class="card-qty-box">
+            <button type="button" class="dec-from-cart-btn" data-id="kolbasa" aria-label="Kolbasa miqdorini kamaytirish">−</button>
+            <span data-item-qty>0</span>
+            <button type="button" class="add-to-cart-btn" data-id="kolbasa" data-name="Kolbasa" data-price="55000" aria-label="Kolbasa qo'shish">+</button>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Sifat Gosht Markazi</p>
+    <p><a href="admin.html">Administrator kirishi</a></p>
+  </footer>
+  <script src="js/java.js"></script>
+</body>
+</html>

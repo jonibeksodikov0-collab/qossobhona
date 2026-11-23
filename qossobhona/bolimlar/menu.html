@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu — Sifat Gosht Markazi</title>
+  <link rel="stylesheet" href="../stayl.css/stayl.css">
+</head>
+<body>
+  <header>
+    <a href="../index.html" class="logo" aria-label="Bosh sahifa">
+      <span class="logo-icon" aria-hidden="true">🥩</span>
+      <span class="logo-text">Sifat<span>gosht</span></span>
+    </a>
+    <nav aria-label="Asosiy menyu">
+      <ul>
+        <li><a href="../index.html">Bosh sahifa</a></li>
+        <li><a href="asosiy.html">Asosiy</a></li>
+        <li><a class="active" href="menu.html">Menu</a></li>
+        <li><a href="savat.html">Savat (<span data-cart-count>0</span>)</a></li>
+        <li><a href="account.html">Kirish</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <div class="section-heading"><h1>Mahsulotlar menu</h1></div>
+    <p class="store-message" id="catalog-message" aria-live="polite"></p>
+    <div class="products" data-products-limit="all">
+      <article class="product-card"><div class="product-image" aria-hidden="true">🥩</div><h3>Mol go'shti (laqim)</h3><p class="price">85 000 so'm / kg</p><div class="card-qty-box"><button type="button" class="dec-from-cart-btn" data-id="laqim">−</button><span data-item-qty>0</span><button type="button" class="add-to-cart-btn" data-id="laqim" data-name="Mol go'shti (laqim)" data-price="85000">+</button></div></article>
+      <article class="product-card"><div class="product-image" aria-hidden="true">🍖</div><h3>Qo'y go'shti</h3><p class="price">95 000 so'm / kg</p><div class="card-qty-box"><button type="button" class="dec-from-cart-btn" data-id="qoy">−</button><span data-item-qty>0</span><button type="button" class="add-to-cart-btn" data-id="qoy" data-name="Qo'y go'shti" data-price="95000">+</button></div></article>
+      <article class="product-card"><div class="product-image" aria-hidden="true">🌭</div><h3>Kolbasa</h3><p class="price">55 000 so'm / kg</p><div class="card-qty-box"><button type="button" class="dec-from-cart-btn" data-id="kolbasa">−</button><span data-item-qty>0</span><button type="button" class="add-to-cart-btn" data-id="kolbasa" data-name="Kolbasa" data-price="55000">+</button></div></article>
+    </div>
+  </main>
+  <script src="../js/java.js"></script>
+</body>
+</html>

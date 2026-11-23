@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin panel — Sifat Gosht Markazi</title>
+  <link rel="stylesheet" href="stayl.css/stayl.css">
+</head>
+<body>
+  <header>
+    <a href="index.html" class="logo" aria-label="Bosh sahifa">
+      <span class="logo-icon" aria-hidden="true">🥩</span>
+      <span class="logo-text">Sifat<span>gosht</span></span>
+    </a>
+    <a href="index.html">Saytga qaytish</a>
+  </header>
+
+  <main class="container admin-container">
+    <section class="account-card" id="admin-login">
+      <h1>Administrator kirishi</h1>
+      <p>Admin hisob ma'lumotlarini kiriting.</p>
+      <form class="account-form" id="admin-login-form">
+        <label for="admin-username">Login</label>
+        <input id="admin-username" name="username" autocomplete="username" value="admin" required>
+        <label for="admin-password">Parol</label>
+        <input id="admin-password" name="password" type="password" autocomplete="current-password" required>
+        <button class="primary-btn" type="submit">Kirish</button>
+      </form>
+      <p class="account-message" id="login-message" aria-live="polite"></p>
+    </section>
+
+    <section id="admin-panel" hidden>
+      <div class="admin-heading">
+        <div>
+          <p class="eyebrow">Boshqaruv</p>
+          <h1>Administrator paneli</h1>
+        </div>
+        <button class="secondary-btn" id="admin-logout" type="button">Chiqish</button>
+      </div>
+
+      <nav class="admin-tabs" aria-label="Administrator bo'limlari">
+        <button class="active" type="button" data-admin-tab="overview">Hisobot</button>
+        <button type="button" data-admin-tab="products">Mahsulotlar</button>
+        <button type="button" data-admin-tab="orders">Buyurtmalar</button>
+        <button type="button" data-admin-tab="customers">Mijozlar</button>
+        <button type="button" data-admin-tab="content">Sayt matni</button>
+      </nav>
+      <p class="admin-status" id="admin-status" role="status" aria-live="polite"></p>
+
+      <section class="admin-section" data-admin-panel="overview">
+        <h2>Umumiy ko'rsatkichlar</h2>
+        <div class="admin-stats" id="report-stats"></div>
+        <h3>Oxirgi 7 kun</h3>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Sana</th><th>Buyurtmalar</th><th>Tushum</th></tr></thead>
+            <tbody id="report-daily"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-section" data-admin-panel="products" hidden>
+        <h2>Mahsulotlar</h2>
+        <form class="admin-form" id="product-form">
+          <input type="hidden" name="id">
+          <label>Nomi<input name="name" maxlength="120" required></label>
+          <label>Mahsulot rasmi
+            <input id="product-image" name="image" type="file" accept="image/jpeg,image/png,image/webp">
+            <span class="field-hint">JPG, PNG yoki WebP; 5 MB gacha</span>
+          </label>
+          <div class="admin-image-preview" aria-live="polite">
+            <img id="product-image-preview" alt="Mahsulot rasmi ko'rinishi" hidden>
+            <span id="product-image-placeholder">Rasm tanlanmagan</span>
+          </div>
+          <label>Narxi (so'm/kg)<input name="price" type="number" min="1" max="1000000000" required></label>
+          <label>Belgisi<input name="emoji" maxlength="8" value="🥩"></label>
+          <label class="checkbox-label"><input name="active" type="checkbox" checked> Saytda ko'rsatish</label>
+          <div class="form-actions">
+            <button class="primary-btn" type="submit">Saqlash</button>
+            <button class="secondary-btn" id="cancel-product-edit" type="button" hidden>Bekor qilish</button>
+          </div>
+        </form>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Nomi</th><th>Narxi</th><th>Holati</th><th>Amallar</th></tr></thead>
+            <tbody id="products-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-section" data-admin-panel="orders" hidden>
+        <h2>Buyurtmalar</h2>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Buyurtma</th><th>Mijoz</th><th>Mahsulotlar</th><th>Jami</th><th>Holat</th><th>Sana</th></tr></thead>
+            <tbody id="orders-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-section" data-admin-panel="customers" hidden>
+        <h2>Mijozlar</h2>
+        <form class="admin-form" id="customer-form">
+          <label>Ismi<input name="name" maxlength="120" required></label>
+          <label>Telefon<input name="phone" type="tel" maxlength="40" required></label>
+          <label>Manzil<input name="address" maxlength="300"></label>
+          <button class="primary-btn" type="submit">Mijoz qo'shish</button>
+        </form>
+        <div class="table-scroll">
+          <table>
+            <thead><tr><th>Ismi</th><th>Telefon</th><th>Manzil</th><th>Buyurtmalar</th><th>Amallar</th></tr></thead>
+            <tbody id="customers-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-section" data-admin-panel="content" hidden>
+        <h2>Sayt matni</h2>
+        <form class="admin-form admin-content-form" id="content-form">
+          <label>Bosh sahifa sarlavhasi<input name="heroTitle" maxlength="160" required></label>
+          <label>Bosh sahifa tavsifi<textarea name="heroText" rows="3" maxlength="500" required></textarea></label>
+          <label>«Asosiy» sahifa sarlavhasi<input name="aboutTitle" maxlength="160" required></label>
+          <label>«Asosiy» sahifa tavsifi<textarea name="aboutText" rows="4" maxlength="1000" required></textarea></label>
+          <button class="primary-btn" type="submit">Matnni saqlash</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <script src="js/admin.js"></script>
+</body>
+</html>
